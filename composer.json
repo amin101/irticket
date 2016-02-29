@@ -13,5 +13,8 @@
   ],
   "psr-4": {
     "Amin101\\Irticket": "src/"
-  }
+  },
+  "files": [
+    "src/helper/helper.php"
+  ]
 }

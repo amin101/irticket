@@ -12,8 +12,8 @@
             <div class="panel-body">{{ $root->content }}</div>
             <div class="panel-footer text-left">
                 <small>
-                    {{ trans('user/ticket/show.created_by') }} {{ $root->user->name }}
-                    {{ trans('user/ticket/show.on') }} {{ jDate::forge($root->created_at->timestamp)->format('datetime') }}
+                    {{ trans('irticket::ticket.created_by') }} {{ $root->user->name }}
+                    {{ trans('irticket::ticket.on') }} {{ jDate::forge($root->created_at->timestamp)->format('datetime') }}
                 </small>
             </div>
         </div>
@@ -24,8 +24,8 @@
                     <div class="panel-body">{{ $ticket->content }}</div>
                     <div class="panel-footer text-left">
                         <small>
-                            {{ trans('user/ticket/show.created_by') }} {{ $ticket->user->name }}
-                            {{ trans('user/ticket/show.on') }} {{ jDate::forge($ticket->created_at->timestamp)->format('datetime') }}
+                            {{ trans('irticket::ticket.created_by') }} {{ $ticket->user->name }}
+                            {{ trans('irticket::ticket.on') }} {{ jDate::forge($ticket->created_at->timestamp)->format('datetime') }}
                         </small>
                     </div>
                 </div>

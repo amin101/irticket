@@ -2,7 +2,7 @@
 
 <div class="form-group {{ addErrorClass($errors, 'title') }}">
     {!! Form::text('title',null,
-    ['class' => 'form-control', 'id' => "title", 'placeholder' => trans('user/ticket/create.title')]) !!}
+    ['class' => 'form-control', 'id' => "title", 'placeholder' => trans('irticket::ticket.title')]) !!}
     {!! InputErrorMessage($errors, 'title') !!}
 </div>
 
@@ -10,5 +10,5 @@
     {!! Form::textarea('content',null,['class' => 'form-control']) !!}
 </div>
 
-<input type="submit" name="submit" class="btn btn-primary" value="{{ trans('user/ticket/create.submit') }}">
+<input type="submit" name="submit" class="btn btn-primary" value="{{ trans('irticket::ticket.submit') }}">
 {!! Form::close() !!}
