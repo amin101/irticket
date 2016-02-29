@@ -60,7 +60,8 @@ class TicketRepository extends BaseRepository
 
     }
 
-    private function saveReply($request, $ticket_id){
+    private function saveReply($request, $ticket_id)
+    {
 
         $this->ticketAnswer->content = $request->input('content');
         $this->ticketAnswer->user_id = $this->userId;
@@ -84,7 +85,7 @@ class TicketRepository extends BaseRepository
 
     public function store($request)
     {
-            $this->save($request);
+        $this->save($request);
     }
 
     public function update($request, $ticket_id)
@@ -96,6 +97,7 @@ class TicketRepository extends BaseRepository
         }
 
     }
+
     public function show($ticket_id)
     {
         //whereId finds the node and orwhere finds its children
@@ -230,3 +232,4 @@ class TicketRepository extends BaseRepository
 
     }
 }
+
