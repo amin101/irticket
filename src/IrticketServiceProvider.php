@@ -21,7 +21,7 @@ class IrticketServiceProvider extends  ServiceProvider
     {
         $this->loadViewsFrom(realpath(__DIR__.'/../views'), 'irticket');
         $this->setupRoutes($this->app->router);
-        $this->loadTranslationsFrom(__DIR__.'/lang', 'courier');
+        $this->loadTranslationsFrom(__DIR__.'/lang', 'irticket');
 
         // this  for conig
         $this->publishes([
