@@ -1,0 +1,15 @@
+{
+    "name": "amin101/irticket",
+    "description": "a simple ticketing system",
+    "require": {
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amin Mazrouei",
+            "email": "aminmazrouei@gmail.com"
+        }
+    ],
+
+    "minimum-stability": "dev"
+}
