@@ -28,6 +28,10 @@ class IrticketServiceProvider extends  ServiceProvider
             __DIR__.'/config/irticket.php' => config_path('irticket.php'),
         ]);
 
+        $this->publishes([
+            __DIR__.'/database/migrations/' => database_path('migrations')
+        ], 'migrations');
+
     }
 
     /**
