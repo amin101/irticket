@@ -4,10 +4,10 @@
 namespace Amin101\Irticket\Repositories;
 
 
-use Amin101\Irticket\Models\TicketQuestion;
+use Amin101\Irticket\Models\Ticket;
 use Amin101\Irticket\Models\TicketAnswer;
-use Amin101\Irticket\Models\TicketAttribute;
 use Amin101\Irticket\Models\TicketCategory;
+use Amin101\Repositories\BaseRepository;
 use Illuminate\Http\Request;
 use Session;
 
