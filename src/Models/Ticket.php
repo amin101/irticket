@@ -3,11 +3,6 @@
 
 namespace Amin101\Irticket\Models;
 
-
-<?php
-
-namespace Amin101\Irticket\Models;
-
 use Illuminate\Database\Eloquent\Model;
 
 class Ticket extends Model
