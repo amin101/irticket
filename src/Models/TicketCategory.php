@@ -8,6 +8,6 @@ class TicketCategory extends Model
 {
 
     public function tickets(){
-        return $this->hasMany('Amin101\Irticket\Models\TicketQuestion');
+        return $this->hasMany('Amin101\Irticket\Models\Ticket');
     }
 }
