@@ -13,11 +13,13 @@
       "php": ">=5.5.9",
       "illuminate/support": "~5.0"
     },
+  "autoload": {
+    "psr-4": {
+      "Amin101\\Irticket": "src/"
+    },
+    "files": [
+      "src/helper/helper.php"
+    ]
+  }
 
-  "psr-4": {
-    "Amin101\\Irticket": "src/"
-  },
-  "files": [
-    "src/helper/helper.php"
-  ]
 }
