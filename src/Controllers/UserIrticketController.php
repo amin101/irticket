@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class TicketController extends Controller
+class UserIrticketController extends Controller
 {
 
     protected $ticketRepo;

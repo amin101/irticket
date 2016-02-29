@@ -13,6 +13,6 @@ class TicketAnswer extends Model
     }
     public function ticket()
     {
-        return $this->belongsTo('Amin101\Irticket\Models\TicketQuestion');
+        return $this->belongsTo('Amin101\Irticket\Models\Ticket');
     }
 }

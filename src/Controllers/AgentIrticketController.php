@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class AdminTicketController extends Controller
+class AgentIrticketController extends Controller
 {
     protected $ticketRepo;
 

@@ -17,7 +17,7 @@ class CreateTicketAnswersTable extends Migration
             $table->integer('agent_id')->unsigned();
             $table->foreign('agent_id')->references('id')->on('users');
             $table->integer('ticke_id')->unsigned();
-            $table->foreign('ticket_id')->references('id')->on('ticket_questions');
+            $table->foreign('ticket_id')->references('id')->on('tickets');
             $table->text('content');
             $table->timestamps();
         });

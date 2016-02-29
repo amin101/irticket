@@ -1,15 +1,17 @@
 {
-    "name": "amin101/irticket",
-    "description": "a simple ticketing system",
-    "require": {
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Amin Mazrouei",
-            "email": "aminmazrouei@gmail.com"
-        }
-    ],
-
-    "minimum-stability": "dev"
+  "name": "amin101/irticket",
+  "description": "a simple ticketing system",
+  "minimum-stability": "dev",
+  "require": {
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Amin Mazrouei",
+      "email": "aminmazrouei@gmail.com"
+    }
+  ],
+  "psr-4": {
+    "Amin101\\Irticket": "src/"
+  }
 }

@@ -1,5 +1,5 @@
-{{--USER show ticket page--}}
-@extends('user.layout.master')
+{{--user show ticket page--}}
+@extends('irticket::layouts.master')
 @section('content')
     @if($root)
         <div class="panel panel-warning">
