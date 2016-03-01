@@ -71,4 +71,5 @@ class AgentIrticketController extends Controller
       $this->ticketRepo->adminDestroy($id);
         return redirect()->route('irticket::backend.index')->with('flash_message', 'Ticket deleted successfully');
     }
+
 }
