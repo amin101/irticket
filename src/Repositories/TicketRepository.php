@@ -8,8 +8,6 @@ use Amin101\Irticket\Models\Ticket;
 use Amin101\Irticket\Models\TicketAnswer;
 use Amin101\Irticket\Models\TicketCategory;
 use Amin101\Irticket\Repositories\BaseRepository;
-use Illuminate\Http\Request;
-use Session;
 
 class TicketRepository extends BaseRepository
 {
