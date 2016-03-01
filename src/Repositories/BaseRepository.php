@@ -1,5 +1,5 @@
 <?php
-namespace Amin101\Repositories;
+namespace Amin101\Irticket\Repositories;
 
 abstract class BaseRepository
 {
