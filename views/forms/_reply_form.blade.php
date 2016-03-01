@@ -4,6 +4,6 @@
   {!! Form::textarea('content',null,['class' => 'form-control']) !!}
 </div>
 
-<input type="submit" name="submit" class="btn btn-primary" value="{{ trans('user/ticket/show.submit') }}">
-<input type="submit" name="close_issue" class="btn btn-danger" value="{{ trans('user/ticket/show.close_issue') }}">
+<input type="submit" name="submit" class="btn btn-primary" value="{{ trans('irticket::ticket.submit') }}">
+<input type="submit" name="close_issue" class="btn btn-danger" value="{{ trans('irticket::ticket.close_issue') }}">
 {!! Form::close() !!}

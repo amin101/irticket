@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('irticket::layouts.master')
 @section('content')
 {{--    {!! dd($tickets) !!}--}}
     <table class="table table-striped">
