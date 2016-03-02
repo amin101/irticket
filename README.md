@@ -22,14 +22,14 @@ Install Irticket package
 
 Add this line on you `config/app.php` in Service Providers section.
 ```php
-		Amin101\Irticket\IrticketServiceProvider::class
+Amin101\Irticket\IrticketServiceProvider::class
 ```
 Run this code to publish migrations and assets
 ```shell
-			php artisan vendor:publish
+php artisan vendor:publish
 ```
 Run three migrations
 ```shell 
-				php artisan migrate
+php artisan migrate
 ```
 				
