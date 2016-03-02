@@ -19,7 +19,6 @@
         </div>
         @if($children)
             @foreach($children as $ticket)
-
                 <div class="panel panel-default">
                     <div class="panel-body">{{ $ticket->content }}</div>
                     <div class="panel-footer text-left">
@@ -32,7 +31,7 @@
             @endforeach
         @endif
         @if(! $root->resolved)
-            @include('user.ticket.forms._reply_form',[ 'ticket_id' => $root->id])
+            @include('irticket::forms._reply_form',[ 'ticket_id' => $root->id])
         @endif
     @endif
 @endsection

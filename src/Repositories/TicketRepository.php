@@ -51,7 +51,7 @@ class TicketRepository extends BaseRepository
         $this->model->title = $request->input('title');
         $this->model->content = $request->input('content');
         $this->model->user_id = $this->userId;
-        $this->model->cat_id = $request->input('cat_id');
+        $this->model->cat_id = $request->input('category');
         $this->model->resolved = $request->input('resolved');
 
         $this->model->save();
@@ -163,7 +163,7 @@ class TicketRepository extends BaseRepository
                                 ->from("$this->ansTable")
                                 ->whereRaw('ans.ticket_id = tck.id');
 
-                        })->whereNull('ans.agent_id');
+                        })->whereRaw("ans.user_id = tck.user_id");
                     });
 
             });
@@ -207,8 +207,12 @@ class TicketRepository extends BaseRepository
     {
 
         $query = \DB::table("$this->tckTable AS tck")
-            ->join("$this->ansTable AS ans", "tck.id", '=', "ans.ticket_id")
-            ->whereNotNull('ans.agent_id')
+            ->join("$this->ansTable AS ans", function ($q) {
+
+                $q->on('tck.id', '=', 'ans.ticket_id')
+                    ->on('tck.user_id', '<>', 'ans.user_id');
+
+            })->where('tck.user_id', $user_id)
             ->whereNull('tck.resolved')
             ->where('ans.created_at', function ($q) use ($user_id) {
 

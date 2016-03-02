@@ -19,8 +19,8 @@ class IrticketServiceProvider extends  ServiceProvider
 
     public function boot()
     {
-        $this->loadViewsFrom(realpath(__DIR__.'/../views'), 'irticket');
         $this->loadTranslationsFrom(__DIR__.'/lang', 'irticket');
+        $this->loadViewsFrom(realpath(__DIR__.'/../views'), 'irticket');
 
         $this->setupRoutes($this->app->router);
         // this  for conig

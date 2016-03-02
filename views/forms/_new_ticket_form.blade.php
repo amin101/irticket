@@ -1,4 +1,4 @@
-{!! Form::open(['route' => 'user.ticket.store', 'method' => 'post']) !!}
+{!! Form::open(['route' => 'user.tickets.store', 'method' => 'post']) !!}
 
 <div class="form-group {{ addErrorClass($errors, 'title') }}">
     {!! Form::text('title',null,
@@ -8,6 +8,10 @@
 
 <div class="form-group">
     {!! Form::textarea('content',null,['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::select('category',$categories,null, ['class' => 'form-control']) !!}
 </div>
 
 <input type="submit" name="submit" class="btn btn-primary" value="{{ trans('irticket::ticket.submit') }}">

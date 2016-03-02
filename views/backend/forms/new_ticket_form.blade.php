@@ -1,7 +1,7 @@
-{!! Form::open(['route' => 'user.ticket.store', 'method' => 'post']) !!}
+{!! Form::open(['route' => 'user.tickets.store', 'method' => 'post']) !!}
 <div class="form-group {{ addErrorClass($errors, 'title') }}">
     {!! Form::text('title',null,
-    ['class' => 'form-control', 'id' => "title", 'placeholder' => trans('user/ticket/create.title')]) !!}
+    ['class' => 'form-control', 'id' => "title", 'placeholder' => trans('irticket::ticket.title')]) !!}
     {!! InputErrorMessage($errors, 'title') !!}
 </div>
 
@@ -10,5 +10,5 @@
 </div>
 
 
-<input type="submit" name="submit" class="btn btn-primary" value="{{ trans('user/ticket/create.submit') }}">
+<input type="submit" name="submit" class="btn btn-primary" value="{{ trans('irticket::ticket.submit') }}">
 {!! Form::close() !!}

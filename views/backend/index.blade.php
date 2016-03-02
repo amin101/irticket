@@ -3,21 +3,21 @@
 {{--    {!! dd($tickets) !!}--}}
     <table class="table table-striped">
        <tr>
-        <th>title</th>
-        <th>user</th>
-        <th>updated at</th>
-       <th>delete</th>
+        <th>{{ trans('irticket::ticket.title') }}</th>
+        <th>{{ trans('irticket::ticket.user') }}</th>
+        <th>{{ trans('irticket::ticket.updated-at') }}</th>
+       <th>{{ trans('irticket::ticket.delete') }}</th>
 
        </tr>
    @foreach($tickets as $ticket)
        <tr>
-        <td>{!! link_to_route('admin.ticket.show', $ticket->title,['ticket'  => $ticket->id]) !!}</td>
+        <td>{!! link_to_route('admin.tickets.show', $ticket->title,['ticket'  => $ticket->id]) !!}</td>
        <td>{{ $ticket->user_id }}</td>
        <td>{{ $ticket->created_at }}</td>
            <td>
-               {!! Form::open(['method' => 'delete', 'route' => ['admin.ticket.destroy', 'ticket' => $ticket->id]]) !!}
+               {!! Form::open(['method' => 'delete', 'route' => ['admin.tickets.destroy', 'ticket' => $ticket->id]]) !!}
                <button type="submit" class="no-btn">
-                   <i class="fa fa-trash-o"></i>
+                   <span class="glyphicon glyphicon-trash"></span>
                </button>
                {!! Form::close() !!}
            </td>

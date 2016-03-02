@@ -15,7 +15,6 @@ class CreateTicketAnswersTable extends Migration
         Schema::create('ticket_answers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('agent_id')->unsigned();
-            $table->foreign('agent_id')->references('id')->on('users');
             $table->integer('ticket_id')->unsigned();
             $table->foreign('ticket_id')->references('id')->on('tickets');
             $table->text('content');

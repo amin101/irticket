@@ -2,6 +2,7 @@
 
 namespace Amin101\Irticket\Http\Controllers;
 
+use Amin101\Irticket\Models\TicketCategory;
 use Amin101\Irticket\Repositories\TicketRepository;
 use Amin101\Irticket\Models\Ticket;
 use Illuminate\Http\Request;
@@ -30,18 +31,20 @@ class UserIrticketController extends Controller
     public function index()
     {
         $tickets =  $this->ticketRepo->index();
-        return view('user.ticket.index', compact('tickets'));
+        return view('irticket::index', compact('tickets'));
     }
 
     public function create()
     {
-        return view('user.ticket.create');
+        $categories = TicketCategory::all();
+        $categories = array_pluck($categories, 'name', 'id');
+        return view('irticket::create')->with('categories', $categories);
     }
 
     public function store(Request $request)
     {
         $this->ticketRepo->store($request);
-        return redirect()->route('user.ticket.index');
+        return redirect()->route('user.tickets.index');
 
     }
 
@@ -51,14 +54,16 @@ class UserIrticketController extends Controller
         $root  = $tickets['root'];
 
         $children = $tickets['children'];
-        return view('user.ticket.show', compact('root', 'children'));
+        $categories = TicketCategory::all();
+        $categories = array_pluck($categories, 'name', 'id');
+        return view('irticket::show', compact('root', 'children', 'categories'));
     }
 
 
     public function update(Request $request, $ticket)
     {
-        $this->ticketRepo->update($request, $ticket);
-        return redirect()->route('user.ticket.index')->with('flash_message', 'Response added successfully');
+        $this->ticketRepo->update($request, $ticket, false);
+        return redirect()->route('user.tickets.index')->with('flash_message', 'Response added successfully');
     }
 
     public function destroy($id)

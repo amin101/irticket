@@ -1,4 +1,4 @@
-{!! Form::open(['route' => ['user.ticket.update', 'ticket' => $ticket_id], 'method' => 'put']) !!}
+{!! Form::open(['route' => ['user.tickets.update', 'ticket' => $ticket_id], 'method' => 'put']) !!}
 
 <div class="form-group">
   {!! Form::textarea('content',null,['class' => 'form-control']) !!}

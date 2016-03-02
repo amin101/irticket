@@ -24,7 +24,6 @@ class AgentIrticketController extends Controller
 
     public function index()
     {
-
         $tickets = $this->ticketRepo->notAnswered();
        return view('irticket::backend.index', compact('tickets'));
     }
@@ -62,14 +61,14 @@ class AgentIrticketController extends Controller
     {
        // dd($request);
         $this->ticketRepo->update($request, $id);
-       return redirect()->route('irticket::backend.index')->with('flash_message', 'Response added successfully');
+       return redirect()->route('admin.tickets.index')->with('flash_message', 'Response added successfully');
     }
 
 
     public function destroy($id)
     {
       $this->ticketRepo->adminDestroy($id);
-        return redirect()->route('irticket::backend.index')->with('flash_message', 'Ticket deleted successfully');
+        return redirect()->route('admin.tickets.index')->with('flash_message', 'Ticket deleted successfully');
     }
 
 }

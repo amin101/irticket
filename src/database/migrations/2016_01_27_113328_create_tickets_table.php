@@ -16,6 +16,8 @@ class CreateTicketsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('cat_id')->unsigned();
+            $table->foreign('cat_id')->references('id')->on('ticket_categories');
             $table->string('title')->nullable();
             $table->text('content');
             $table->smallInteger('resolved')->nullable();
