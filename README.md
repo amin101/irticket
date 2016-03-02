@@ -17,10 +17,10 @@ a simple tickets system for laravel 5.2+ witch integrates with Laravel default u
 
 Install Irticket package
 ```shell
-		composer require amin101/irticket:1.*
+composer require amin101/irticket:1.*
 ```
 
-Add this line on you `config/app.php` in Service Providers section.
+Add this line on your `config/app.php` in Service Providers section.
 ```php
 Amin101\Irticket\IrticketServiceProvider::class
 ```
@@ -32,4 +32,8 @@ Run three migrations
 ```shell 
 php artisan migrate
 ```
-				
+			
+##Views
+after publishing , irticket views files are under `resources/views/vendor/irticket` path. feel free to edit `app.blade.php` to fit it to your site template structure.
+just dont forget to add `@yield('content')` .
+ 			

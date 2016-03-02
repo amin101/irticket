@@ -13,7 +13,6 @@
         </div>
         @if($children)
         @foreach($children as $ticket)
-{{--{!! dd($ticket) !!}--}}
             <div class="panel panel-default">
                 <div class="panel-body">{{ $ticket->content }}</div>
                 <div class="panel-footer text-left"><small>{{ trans('irticket::ticket.created-by') }} {{ $ticket->user->name }} {{ trans('irticket::ticket.on') }} {{ $ticket->created_at }}</small></div>

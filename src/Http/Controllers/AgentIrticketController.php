@@ -46,7 +46,6 @@ class AgentIrticketController extends Controller
         $tickets = $this->ticketRepo->show($id, null);
         $root  = $tickets['root'];
         $children = $tickets['children'];
-//        dd($root);
         return view('irticket::backend.show', compact('root', 'children'));
     }
 

@@ -20,7 +20,7 @@ class IrticketServiceProvider extends  ServiceProvider
     public function boot()
     {
         $this->loadTranslationsFrom(__DIR__.'/lang', 'irticket');
-        $this->loadViewsFrom(realpath(__DIR__.'/../views'), 'irticket');
+        $this->loadViewsFrom(__DIR__.'/../views', 'irticket');
 
         $this->setupRoutes($this->app->router);
         // this  for conig
@@ -29,7 +29,7 @@ class IrticketServiceProvider extends  ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__.'/../views' => resource_path('views/amin101/irticket'),
+            __DIR__.'/../views' => resource_path('views/vendor/irticket'),
         ], 'views');
 
         $this->publishes([
