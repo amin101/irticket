@@ -1,5 +1,5 @@
 # irticket v1.0
-a simple tickets system for laravel 5.2+ witch integrates with Laravel default users system.
+a simple tickets system for laravel 5.2+ which integrates with Laravel default users system.
 
 ##Features:
 1. Users can create tickets, keep track of their tickets status, giving comments, and close (resolve) their own tickets.
