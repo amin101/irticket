@@ -25,10 +25,11 @@ class TicketRepository extends BaseRepository
     /**
      * TicketRepository constructor.
      */
-    public function __construct(Ticket $ticket,
-                                TicketAnswer $ticketAnswer,
-                                TicketCategory $category)
-    {
+    public function __construct(
+        Ticket $ticket,
+        TicketAnswer $ticketAnswer,
+        TicketCategory $category
+    ) {
         $this->model = $ticket;
         $this->ticketAnswer = $ticketAnswer;
         $this->category = $category;
@@ -78,7 +79,9 @@ class TicketRepository extends BaseRepository
             $ticket->resolved = 1;
             $ticket->save();
             return true;
-        } else return false;
+        } else {
+            return false;
+        }
     }
 
     public function store($request)
